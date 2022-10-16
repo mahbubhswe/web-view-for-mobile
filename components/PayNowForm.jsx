@@ -55,7 +55,7 @@ export default function PayNowForm({ data }) {
   }
 
   return (
-    <Stack spacing={2}>
+    <Stack spacing={2} sx={{p:"10px"}}>
       <Typography
         sx={{
           textAlign: "center",
@@ -94,17 +94,19 @@ export default function PayNowForm({ data }) {
         InputProps={{ disableUnderline: true }}
         onChange={(e) => setAmount(e.target.value)}
       />
-      <div style={{ padding: "50px" }}>
-        <Button
-          disabled={amount > 0 ? (personName ? false : true) : true}
-          variant="contained"
-          color="btnColor"
-          fullWidth
-          onClick={payNow}
-        >
-          যুক্ত করুন
-        </Button>
-      </div>
+
+      <Button
+        disabled={amount > 0 ? (personName ? false : true) : true}
+        sx={{ my: "10px", borderRadius: "50px", backgroundColor: "#DE4A6D" }}
+        variant="contained"
+        color="btnColor"
+        fullWidth
+        size="small"
+        onClick={payNow}
+      >
+        যুক্ত করুন
+      </Button>
+
       <Backdrop open={open}>
         <CircularProgress />
       </Backdrop>

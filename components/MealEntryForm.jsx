@@ -65,7 +65,7 @@ export default function MealEntryForm({ data }) {
   }
 
   return (
-    <>
+    <div style={{padding:"10px"}}>
       <TableContainer>
         <Typography
           sx={{
@@ -116,20 +116,22 @@ export default function MealEntryForm({ data }) {
         </Table>
       </TableContainer>
       <Divider></Divider>
-      <div style={{padding:"50px"}}>
-        <Button
+     
+      <Button
+        sx={{my:"10px",borderRadius:"50px",backgroundColor:"#DE4A6D"}}
           variant="contained"
           color="btnColor"
-          fullWidth
+        fullWidth
+        size="small"
           onClick={updateMeal}
         >
           যুক্ত করুন
         </Button>
-      </div>
+     
 
       <Backdrop open={open}>
         <CircularProgress />
       </Backdrop>
-    </>
+    </div>
   );
 }

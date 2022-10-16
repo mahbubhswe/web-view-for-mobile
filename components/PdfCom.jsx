@@ -1,5 +1,4 @@
 import {
-  Paper,
   Divider,
   Stack,
   Table,
@@ -43,7 +42,7 @@ export default function PdfCom({ data }) {
       </div>
       <div
         ref={ref}
-        style={{ paddingLeft: "10px", width: "780px" }}
+        style={{ paddingLeft: "10px", width: "780px",backgroundColor:"#121212" }}
       >
         <Typography
           sx={{ fontSize: "30px", fontWeight: 900, textAlign: "center",pt:"20px" }}
